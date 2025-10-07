@@ -1,126 +1,140 @@
-🤖 Robotics Kinematics & Visualization Suite
-This repository contains essential scripts for understanding, simulating, and visualizing the kinematics of robotic manipulators, covering both Denavit-Hartenberg (DH) parameter conventions and analytical Inverse Kinematics (IK) solutions for common planar arm configurations.
+# 🤖 Kinematics
 
-The code is split between Python (utilizing matplotlib and numpy) for hands-on, specific planar arm analysis, and MATLAB (utilizing the Symbolic Toolbox) for generalized DH transformation matrix derivation and 3D frame visualization.
+![Header Banner](https://capsule-render.vercel.app/api?type=rect\&color=0:0D47A1,100:1976D2\&height=90\&section=header\&text=Kinematics\&fontSize=30\&fontColor=ffffff\&fontAlignY=55)
 
-📁 Repository Structure
-File Name
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MATLAB-R2023a+-orange?style=flat-square&logo=mathworks&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square"/>
+  <img src="https://img.shields.io/github/stars/AryanGanesh/Kinematics?style=flat-square&color=yellow"/>
+  <img src="https://img.shields.io/github/last-commit/AryanGanesh/Kinematics?style=flat-square&color=blue"/>
+</p>
 
-Language
+---
 
-Description
+## 🧠 Overview
 
-Key Functionality
+**Kinematics** is a comprehensive learning and visualization toolkit for **robotic manipulator kinematics** — from simple planar arms to generalized multi-DOF systems.
+It blends **Python** (for analytical planar inverse kinematics and visualization) with **MATLAB** (for symbolic DH parameter derivation and 3D coordinate frame visualization).
 
-dof2.py
+🎯 Designed for students, researchers, and robotics enthusiasts to **build deep intuition for how robotic arms move and orient themselves in space**.
 
-Python
+---
 
-2-DOF Planar Arm Kinematics
+## 📁 Repository Structure
 
-Calculates Inverse Kinematics (IK) for a 2R arm. Plots the reachable workspace and the final arm configuration for the two solutions (elbow-up/elbow-down).
+| File                        | Language | Description                  | Key Functionality                                                                                    |
+| --------------------------- | -------- | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `dof2.py`                   | Python   | 2-DOF Planar Arm Kinematics  | Analytical IK for a 2R arm. Plots reachable workspace and both elbow-up/elbow-down poses.            |
+| `dof3.py`                   | Python   | 3-DOF Planar Arm Kinematics  | Position + orientation IK using DH convention. Visualizes workspace and target configuration.        |
+| `DH_params_visualisation.m` | MATLAB   | Generalized DH Visualization | Accepts numeric/symbolic DH parameters for N-DOF arms. Computes HTMs and plots 3D coordinate frames. |
 
-dof3.py
+---
 
-Python
+## 🚀 Getting Started
 
-3-DOF Planar Arm Kinematics
+### 🧩 Prerequisites
 
-Calculates Inverse Kinematics (IK) for a 3R arm (position and orientation). Uses DH convention and plots the workspace and final configuration.
+| Tool                      | Purpose                              | Status                                      |
+| ------------------------- | ------------------------------------ | ------------------------------------------- |
+| **Python 3.x**            | For 2R and 3R IK scripts             | ✅ Required                                  |
+| **NumPy**                 | Matrix and trigonometric operations  | ✅ Required                                  |
+| **Matplotlib**            | Visualization and workspace plotting | ✅ Required                                  |
+| **MATLAB**                | For DH visualization                 | ✅ Required                                  |
+| **Symbolic Math Toolbox** | Symbolic computation in MATLAB       | ⚙️ Required for `DH_params_visualisation.m` |
 
-DH_params_visualisation.m
+---
 
-MATLAB
+### ⚙️ Installation
 
-Generalized DH Visualization
+Clone the repository:
 
-Takes user-defined DH parameters (numeric or symbolic) for an N-DOF robot, calculates the Homogeneous Transformation Matrices (HTM), and visualizes the coordinate frames in 3D space.
+```bash
+git clone https://github.com/AryanGanesh/Kinematics.git
+cd Kinematics
+```
 
-🚀 Getting Started
-Prerequisites
-Tool
+Install Python dependencies:
 
-Purpose
-
-Status
-
-Python 3.x
-
-Used for the dof2.py and dof3.py scripts.
-
-Required
-
-numpy
-
-Mathematical operations in Python.
-
-Required
-
-matplotlib
-
-Plotting arm configurations and workspaces in Python.
-
-Required
-
-MATLAB
-
-Used for the DH_params_visualisation.m script.
-
-Required
-
-MATLAB Symbolic Math Toolbox
-
-Essential for symbolic DH matrix derivation.
-
-Required for .m file
-
-Installation
-After cloning the repository, follow these steps to set up your environment:
-
-Install Python Packages:
-The Python scripts (dof2.py and dof3.py) rely on two primary libraries:
-
-numpy for efficient array and matrix operations required for kinematics calculations.
-
-matplotlib for generating the interactive arm plots and workspace visualizations.
-
-Run the following command in your terminal:
-
+```bash
 pip install numpy matplotlib
+```
 
-Verify MATLAB Symbolic Toolbox:
-The DH_params_visualisation.m file requires the Symbolic Math Toolbox within your MATLAB installation. If you encounter an error when running the script, ensure this toolbox is installed and licensed.
+Ensure MATLAB’s **Symbolic Math Toolbox** is available to run the DH visualization script.
 
+---
 
 ## 💡 Usage
 
-### 1. 2R and 3R Planar Arm Inverse Kinematics (`dof2.py` & `dof3.py`)
-
-Run the Python scripts directly from your terminal. They are interactive and will prompt you for link lengths and the target end-effector coordinates.
+### 1️⃣ 2R & 3R Planar Arm Inverse Kinematics (Python)
 
 ```bash
-# For 2-DOF planar arm analysis
+# For 2-DOF arm
 python dof2.py
 
-# For 3-DOF planar arm analysis (position + orientation)
+# For 3-DOF arm (position + orientation)
 python dof3.py
+```
 
-Output: Each script will first plot the full reachable workspace and then display one or two separate plots showing the arm in the calculated configuration reaching the specified target point.
+**Output:**
 
-2. Generalized DH Visualization (DH_params_visualisation.m)
-Open the .m file in MATLAB and run it. The script will guide you through entering the Denavit-Hartenberg parameters for your specific robot (N-DOF).
+* Interactive plots showing the **reachable workspace**
+* Visualization of **arm configurations** reaching the target
 
+---
+
+### 2️⃣ Generalized DH Visualization (MATLAB)
+
+Run in MATLAB:
+
+```matlab
 >> DH_params_visualisation
+```
+
+**Features:**
+
+* Accepts **numeric or symbolic** DH parameters
+* Computes all **Homogeneous Transformation Matrices (HTMs)**
+* Visualizes coordinate frames (**Frame 0 → Frame N**) in **3D**
+* Displays final transformation ( T_{0}^{N} ) both symbolically and numerically
+
+---
+
+## ✨ Features
+
+✅ Analytical IK solutions for 2R & 3R planar manipulators
+✅ Generalized DH parameter visualization for N-DOF systems
+✅ Symbolic computation for HTM derivation
+✅ Interactive plots for geometric understanding
+✅ Educational focus — clear and modifiable for learning
+
+---
+
+## 📸 Demo Snapshots *(Optional)*
+
+> *(You can add your images or GIFs here)*
+>
+> * <img width="711" height="716" alt="image" src="https://github.com/user-attachments/assets/5dc8eeb3-dacd-45bc-9952-247ec0a69894" />
+
+> * <img width="1911" height="1019" alt="image" src="https://github.com/user-attachments/assets/b3a83ca4-ba17-4a00-8b0c-69a7acb4c374" />
+
+> * `<img width="825" height="839" alt="image" src="https://github.com/user-attachments/assets/4063ee4f-2450-4a49-bcf5-d452aa69be2e" />
 
 
-Key Features:
 
-Accepts both numeric (for immediate plotting) and symbolic (for HTM derivation) DH parameters.
+## 🧑‍💻 Author
 
-Plots all coordinate frames (Frame 0 to Frame N) in a 3D figure, allowing you to visualize the link geometry.
+**Aryan Ganesh K.**
+Robotics & Mechatronics Engineer
 
-Calculates and prints the final symbolic and numerical Homogeneous Transformation Matrices (T 
-0
-N
-​
- )
+<p align="left">
+  <a href="https://www.linkedin.com/in/aryanganesh-kavuri-405684286" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin"/>
+  </a>
+  <a href="https://github.com/AryanGanesh" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=flat-square&logo=github"/>
+  </a>
+</p>
+
+⭐ **If you find this repository helpful, give it a star — it helps others discover and supports future development!**
+
