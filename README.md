@@ -114,11 +114,11 @@ Run in MATLAB:
 
 
 > * <img width="711" height="716" alt="image" src="https://github.com/user-attachments/assets/5dc8eeb3-dacd-45bc-9952-247ec0a69894" />
-> 2 DOF planar arm workspace
+**2 DOF planar arm workspace**
 > * <img width="1911" height="1019" alt="image" src="https://github.com/user-attachments/assets/b3a83ca4-ba17-4a00-8b0c-69a7acb4c374" />
-> 3 DOF Planar arm solutions visualised
+**3 DOF Planar arm solutions visualised**
 > * `<img width="825" height="839" alt="image" src="https://github.com/user-attachments/assets/4063ee4f-2450-4a49-bcf5-d452aa69be2e" />
-> N-DOF DH parameters Visualised
+**N-DOF DH parameters Visualised**
 
 
 ## 🧑‍💻 Author
