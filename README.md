@@ -118,6 +118,7 @@ Run in MATLAB:
 > * <img width="1911" height="1019" alt="image" src="https://github.com/user-attachments/assets/b3a83ca4-ba17-4a00-8b0c-69a7acb4c374" />
 **3 DOF Planar arm solutions visualised**
 > * `<img width="825" height="839" alt="image" src="https://github.com/user-attachments/assets/4063ee4f-2450-4a49-bcf5-d452aa69be2e" />
+
 **N-DOF DH parameters Visualised**
 
 
