@@ -28,7 +28,7 @@ It blends **Python** (for analytical planar inverse kinematics and visualization
 | `dof2.py`                       | Python   | 2-DOF Planar Arm Kinematics           | Analytical IK for a 2R arm. Plots reachable workspace and both elbow-up/elbow-down poses.            |
 | `dof3.py`                       | Python   | 3-DOF Planar Arm Kinematics           | Position + orientation IK using DH convention. Visualizes workspace and target configuration.        |
 | `DH_params_visualisation.m`     | MATLAB   | Generalized DH Visualization          | Accepts numeric/symbolic DH parameters for N-DOF arms. Computes HTMs and plots 3D coordinate frames. |
-| `2link_manipulator_animation.m` | MATLAB   | 2-Link Manipulator Workspace Animation | Real-time animation of 2R robot exploring linear trajectories with dual elbow-up/down visualization. |
+| `Link_Manipulator_simulation.m` | MATLAB   | 2-Link Manipulator Workspace Animation | Real-time animation of 2R robot exploring linear trajectories with dual elbow-up/down visualization. |
 
 ---
 
@@ -106,7 +106,7 @@ Run in MATLAB:
 Run in MATLAB:
 
 ```matlab
->> 2link_manipulator_animation
+>> Link_Manipulator_simulation
 ```
 
 **Features:**
